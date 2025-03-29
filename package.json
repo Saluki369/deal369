@@ -1,0 +1,30 @@
+{
+  "name": "menschgreifzu",
+  "version": "1.0.0",
+  "description": "Affiliate Marketing Platform with Landing Pages and Email Integration",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "build": "npm install && node app.js"
+  },
+  "keywords": [
+    "affiliate",
+    "marketing",
+    "landing-pages",
+    "email-automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "mongoose": "^8.13.0",
+    "nodemailer": "^6.10.0"
+  }
+}
