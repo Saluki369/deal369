@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <div class="text-center mb-4">
+                        <h2 class="text-white">Menschgreifzu</h2>
+                        <p class="text-muted">Affiliate Marketing Platform</p>
+                    </div>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link <%= activeTab === 'dashboard' ? 'active' : '' %>" href="/dashboard">
+                                <i class="bi bi-speedometer2 me-2"></i>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link <%= activeTab === 'affiliates' ? 'active' : '' %>" href="/affiliates">
+                                <i class="bi bi-people me-2"></i>
+                                Affiliates
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link <%= activeTab === 'landingpages' ? 'active' : '' %>" href="/landingpages">
+                                <i class="bi bi-file-earmark-text me-2"></i>
+                                Landing Pages
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link <%= activeTab === 'leads' ? 'active' : '' %>" href="/leads">
+                                <i class="bi bi-person-plus me-2"></i>
+                                Leads
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link <%= activeTab === 'socialposts' ? 'active' : '' %>" href="/socialposts">
+                                <i class="bi bi-share me-2"></i>
+                                Social Posts
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link <%= activeTab === 'emails' ? 'active' : '' %>" href="/emails">
+                                <i class="bi bi-envelope me-2"></i>
+                                Email Campaigns
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link <%= activeTab === 'buffer' ? 'active' : '' %>" href="/buffer">
+                                <i class="bi bi-calendar-check me-2"></i>
+                                Buffer Integration
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link <%= activeTab === 'automation' ? 'active' : '' %>" href="/automation">
+                                <i class="bi bi-robot me-2"></i>
+                                Automation
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link <%= activeTab === 'settings' ? 'active' : '' %>" href="/settings">
+                                <i class="bi bi-gear me-2"></i>
+                                Settings
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2"><%= title %></h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <div class="btn-group me-2">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+                        </div>
+                    </div>
+                </div>
+
+                <%- body %>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Posts - Menschgreifzu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Main content -->
+            <main class="col-12 px-4">
+                <h1 class="h3 mb-4 text-gray-800">Social Media Posts</h1>
+                
+                <!-- Social Posts Management -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-primary">Social Media Posts verwalten</h6>
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#createPostModal">
+                            <i class="bi bi-plus-circle me-1"></i> Neuer Post
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="socialPostsTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Affiliate</th>
+                                        <th>Plattform</th>
+                                        <th>Inhalt</th>
+                                        <th>Geplant für</th>
+                                        <th>Status</th>
+                                        <th>Analytics</th>
+                                        <th>Aktionen</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Affiliate 1</td>
+                                        <td><i class="bi bi-facebook platform-icon platform-facebook"></i> Facebook</td>
+                                        <td>Entdecken Sie die neuesten Angebote von Affiliate 1! Jetzt mit 20% Rabatt...</td>
+                                        <td>01.04.2025 10:00</td>
+                                        <td><span class="badge bg-warning">Geplant</span></td>
+                                        <td>-</td>
+                                        <td>
+                                            <button class="btn btn-info btn-sm" title="Bearbeiten">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-primary btn-sm" title="Vorschau">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                            <button class="btn btn-danger btn-sm" title="Löschen">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Affiliate 2</td>
+                                        <td><i class="bi bi-instagram platform-icon platform-instagram"></i> Instagram</td>
+                                        <td>Die Sommersaison beginnt! Sichern Sie sich die besten Deals für Ihre Reise...</td>
+                                        <td>02.04.2025 14:30</td>
+                                        <td><span class="badge bg-warning">Geplant</span></td>
+                                        <td>-</td>
+                                        <td>
+                                            <button class="btn btn-info btn-sm" title="Bearbeiten">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-primary btn-sm" title="Vorschau">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                            <button class="btn btn-danger btn-sm" title="Löschen">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Affiliate 3</td>
+                                        <td><i class="bi bi-twitter platform-icon platform-twitter"></i> Twitter</td>
+                                        <td>Finanzielle Freiheit ist kein Traum! Erfahren Sie, wie Sie mit unseren Partnern...</td>
+                                        <td>28.03.2025 09:15</td>
+                                        <td><span class="badge bg-success">Gepostet</span></td>
+                                        <td>
+                                            <small>
+                                                <i class="bi bi-heart-fill text-danger"></i> 45
+                                                <i class="bi bi-reply-fill text-primary ms-2"></i> 12
+                                                <i class="bi bi-share-fill text-success ms-2"></i> 8
+                                            </small>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-info btn-sm" title="Bearbeiten">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-primary btn-sm" title="Vorschau">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                            <button class="btn btn-danger btn-sm" title="Löschen">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Buffer Integration Status -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">Buffer Integration Status</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <h6 class="m-0 font-weight-bold">Verbundene Konten</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul class="list-group">
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <i class="bi bi-facebook platform-icon platform-facebook"></i>
+                                                    Facebook
+                                                </div>
+                                                <span class="badge bg-success rounded-pill">Verbunden</span>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <i class="bi bi-instagram platform-icon platform-instagram"></i>
+                                                    Instagram
+                                                </div>
+                                                <span class="badge bg-success rounded-pill">Verbunden</span>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <i class="bi bi-twitter platform-icon platform-twitter"></i>
+                                                    Twitter
+                                                </div>
+                                                <span class="badge bg-success rounded-pill">Verbunden</span>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <i class="bi bi-linkedin platform-icon platform-linkedin"></i>
+                                                    LinkedIn
+                                                </div>
+                                                <span class="badge bg-secondary rounded-pill">Nicht verbunden</span>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <i class="bi bi-pinterest platform-icon platform-pinterest"></i>
+                                                    Pinterest
+                                                </div>
+                                                <span class="badge bg-secondary rounded-pill">Nicht verbunden</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <h6 class="m-0 font-weight-bold">Buffer Status</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-3">
+                                            <p><strong>API-Status:</strong> <span class="badge bg-success">Aktiv</span></p>
+                                            <p><strong>Letzte Synchronisierung:</strong> 28.03.2025 08:45</p>
+                                            <p><strong>Geplante Posts:</strong> 12</p>
+                                            <p><strong>Gepostete Beiträge (letzten 30 Tage):</strong> 45</p>
+                                        </div>
+                                        <div class="d-grid gap-2">
+                                            <button class="btn btn-primary btn-sm">Mit Buffer synchronisieren</button>
+                                            <button class="btn btn-info btn-sm">Buffer-Einstellungen</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Content Templates -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-primary">Content-Vorlagen</h6>
+                        <button class="btn btn-primary btn-sm">
+                            <i class="bi bi-plus-circle me-1"></i> Neue Vorlage
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <!-- Template 1 -->
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="card">
+                                    <div class="card-header bg-primary text-white">
+                                        <h6 class="m-0 font-weight-bold">Produkt-Promotion</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">Entdecken Sie die neuesten [Produkte] von [Affiliate]! Jetzt mit [Rabatt]% Rabatt für kurze Zeit. Klicken Sie hier, um mehr zu erfahren: [Link] #[Hashtag1] #[Hashtag2]</p>
+                                        <div class="d-flex justify-content-between">
+                                            <span class="badge bg-info">Facebook</span>
+                                            <span class="badge bg-info">Twitter</span>
+                                            <span class="badge bg-info">Instagram</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-between">
+                                        <button class="btn btn-primary btn-sm">Verwenden</button>
+                                        <button class="btn btn-info btn-sm">Bearbeiten</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Template 2 -->
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="card">
+                                    <div class="card-header bg-success text-white">
+                                        <h6 class="m-0 font-weight-bold">Informativ</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">Wussten Sie schon? [Fakt] ist einer der wichtigsten Aspekte bei [Thema]. Unser Partner [Affiliate] bietet Lösungen, die Ihnen helfen können. Mehr Infos: [Link] #[Hashtag1] #[Hashtag2]</p>
+                                        <div class="d-flex justify-content-between">
+                                            <span class="badge bg-info">Facebook</span>
+                                            <span class="badge bg-info">LinkedIn</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-between">
+                                        <button class="btn btn-primary btn-sm">Verwenden</button>
+                                        <button class="btn btn-info btn-sm">Bearbeiten</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Template 3 -->
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="card">
+                                    <div class="card-header bg-warning text-white">
+                                        <h6 class="m-0 font-weight-bold">Zeitlich begrenzt</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">⏰ Nur noch [Tage] Tage! Verpassen Sie nicht die exklusiven Angebote von [Affiliate]. Bis zu [Rabatt]% Rabatt auf [Produkte]. Jetzt zugreifen: [Link] #[Hashtag1] #[Hashtag2]</p>
+                                        <div class="d-flex justify-content-between">
+                                            <span class="badge bg-info">Facebook</span>
+                                            <span class="badge bg-info">Instagram</span>
+                                            <span class="badge bg-info">Twitter</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-between">
+                                        <button class="btn btn-primary btn-sm">Verwenden</button>
+                                        <button class="btn btn-info btn-sm">Bearbeiten</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <!-- Create Post Modal -->
+    <div class="modal fade" id="createPostModal" tabindex="-1" aria-labelledby="createPostModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="createPostModalLabel">Neuen Social Media Post erstellen</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="post-affiliate-input">Affiliate</label>
+                                    <select class="form-control" id="post-affiliate-input">
+                                        <option value="">-- Affiliate auswählen --</option>
+                                        <option value="1">Affiliate 1</option>
+                                        <option value="2">Affiliate 2</option>
+                                        <option value="3">Affiliate 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="post-platform-input">Plattform</label>
+                                    <select class="form-control" id="post-platform-input">
+                                        <option value="">-- Plattform auswählen --</option>
+                                        <option value="facebook">Facebook</option>
+                                        <option value="instagram">Instagram</option>
+                                        <option value="twitter">Twitter</option>
+                                        <option value="linkedin">LinkedIn</option>
+                                        <option value="pinterest">Pinterest</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="post-content-input">Inhalt</label>
+                            <textarea class="form-control" id="post-content-input" rows="5" placeholder="Inhalt des Posts"></textarea>
+                            <small class="form-text text-muted">
+                                <span id="character-count">0</span>/280 Zeichen (für Twitter)
+                            </small>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="post-image-input">Bild-URL</label>
+                            <input type="url" class="form-control" id="post-image-input" placeholder="https://example.com/image.jpg">
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="post-date-input">Datum</label>
+                                    <input type="date" class="form-control" id="post-date-input">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="post-time-input">Uhrzeit</label>
+                                    <input type="time" class="form-control" id="post-time-input">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="post-template-input">Vorlage verwenden</label>
+                            <select class="form-control" id="post-template-input">
+                                <option value="">-- Keine Vorlage --</option>
+                                <option value="template1">Produkt-Promotion</option>
+                                <option value="template2">Informativ</option>
+                                <option value="template3">Zeitlich begrenzt</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Abbrechen</button>
+                    <button type="button" class="btn btn-primary">Post erstellen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

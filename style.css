@@ -1,0 +1,209 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fc;
+}
+
+.sidebar {
+    min-height: 100vh;
+    background-color: #4e73df;
+    background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
+    background-size: cover;
+}
+
+.sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    font-weight: 500;
+}
+
+.sidebar .nav-link:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .nav-link.active {
+    color: #fff;
+    font-weight: 700;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.card {
+    border-radius: 0.35rem;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+.card-header {
+    background-color: #f8f9fc;
+    border-bottom: 1px solid #e3e6f0;
+}
+
+.border-left-primary {
+    border-left: 0.25rem solid #4e73df !important;
+}
+
+.border-left-success {
+    border-left: 0.25rem solid #1cc88a !important;
+}
+
+.border-left-info {
+    border-left: 0.25rem solid #36b9cc !important;
+}
+
+.border-left-warning {
+    border-left: 0.25rem solid #f6c23e !important;
+}
+
+.chart-area {
+    position: relative;
+    height: 20rem;
+}
+
+.chart-area canvas {
+    max-width: 100%;
+}
+
+.text-primary {
+    color: #4e73df !important;
+}
+
+.text-success {
+    color: #1cc88a !important;
+}
+
+.text-info {
+    color: #36b9cc !important;
+}
+
+.text-warning {
+    color: #f6c23e !important;
+}
+
+.bg-primary {
+    background-color: #4e73df !important;
+}
+
+.bg-success {
+    background-color: #1cc88a !important;
+}
+
+.bg-info {
+    background-color: #36b9cc !important;
+}
+
+.bg-warning {
+    background-color: #f6c23e !important;
+}
+
+.progress {
+    height: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.table th {
+    font-weight: 600;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* Landing page preview styles */
+.landing-page-preview {
+    border: 1px solid #ddd;
+    border-radius: 0.35rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Affiliate card styles */
+.affiliate-card {
+    transition: transform 0.3s;
+}
+
+.affiliate-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Social media platform icons */
+.platform-icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.platform-facebook {
+    color: #3b5998;
+}
+
+.platform-instagram {
+    color: #e1306c;
+}
+
+.platform-twitter {
+    color: #1da1f2;
+}
+
+.platform-linkedin {
+    color: #0077b5;
+}
+
+.platform-pinterest {
+    color: #bd081c;
+}
+
+/* Automation section styles */
+.automation-card {
+    background-color: #fff;
+    border-radius: 0.35rem;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.automation-card:hover {
+    transform: translateY(-5px);
+}
+
+.automation-card .card-header {
+    background-color: #4e73df;
+    color: white;
+    font-weight: 700;
+}
+
+.automation-icon {
+    font-size: 2.5rem;
+    color: #4e73df;
+    margin-bottom: 1rem;
+}
+
+/* Form styles */
+.form-control:focus {
+    border-color: #4e73df;
+    box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+}
+
+.btn-primary {
+    background-color: #4e73df;
+    border-color: #4e73df;
+}
+
+.btn-primary:hover {
+    background-color: #2e59d9;
+    border-color: #2653d4;
+}
+
+/* Custom switch for automation toggles */
+.custom-switch .custom-control-label::before {
+    width: 2.5rem;
+    height: 1.25rem;
+    border-radius: 0.625rem;
+}
+
+.custom-switch .custom-control-label::after {
+    width: calc(1.25rem - 4px);
+    height: calc(1.25rem - 4px);
+    border-radius: calc(0.625rem - 2px);
+}
+
+.custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+    transform: translateX(1.25rem);
+}
